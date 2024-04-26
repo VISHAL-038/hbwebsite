@@ -1,0 +1,42 @@
+:root{
+    --teal:#279e8c;
+    --teal_hover:#2ec1ac
+}
+
+.custom-bg{
+    background-color:var(--teal);
+    border:1px solid var(--teal_hover);
+}
+.custom-bg:hover{
+    background-color: var(--teal);
+    border: 1px solid  var(--teal_hover);
+}
+
+.h-line{
+    width: 150px;
+    margin: 0 auto;
+    height: 1.8px;
+}
+
+.custom-alert{
+    position: fixed;
+    top:95px;
+    right: 25px;
+    z-index: 50px;
+}
+
+#dashboard-menu {
+    position: fixed ;
+    height: 100% ;
+}
+
+@media screen and (max-widhth: 992px)
+{
+    #dashboard-menu {
+        height: auto ;
+        width: 100% ;
+    }
+    #main-content{
+        margin-top: 60px;
+    }
+}
