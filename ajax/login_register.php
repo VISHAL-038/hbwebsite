@@ -51,7 +51,12 @@
                 $_SESSION['uid']= $u_fetch['id'];
                 $_SESSION['uName']= $u_fetch['name'];
                 $_SESSION['uPhone']= $u_fetch['phonenum'];
-                echo 1;
+                $_SESSION['uEmail'] = $u_fetch['email'];
+                $_SESSION['uAddress'] = $u_fetch['address'];
+                $_SESSION['uDob'] = $u_fetch['dob'];
+
+                header("Location: profile.php");
+                exit;
            }
         }
     }
