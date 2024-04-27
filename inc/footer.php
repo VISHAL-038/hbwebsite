@@ -6,7 +6,7 @@
                     Hotel
                 </h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vel, cupiditate, natus suscipit neque quas voluptates quasi ratione ipsa necessitatibus quis iusto eius, recusandae architecto harum labore tenetur vero a
+                    Welcome to our hotel! As the owner, it is my pleasure to extend a warm welcome to you. Our goal is to provide you with a memorable and comfortable stay, whether you're here for business or leisure. At our hotel, we strive to exceed your expectations by offering exceptional service, luxurious amenities, and a welcoming atmosphere. 
                 </p>
             </div>
             <div class="col-lg-4 p-4">

@@ -15,7 +15,7 @@
     <?php require('inc/header.php'); ?>
 
     <div class="container-fluid">
-        <div class="rows">
+        <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
                 <h3 class='mb-4'>Messages</h3>
                 <div class="card border-0 shadow-sm mb-4">
@@ -48,6 +48,5 @@
     <?php require('inc/scripts.php'); ?>
     <script src="scripts/message.js"></script>
     <script>get_message();</script>
-    <script>toggleSeen();</script>
 </body>
 </html>

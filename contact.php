@@ -17,7 +17,8 @@
     <div class="my-5 px-4">
         <h2 class="fw-bold text-center" >Contact US</h2>
         <div class="h-line bg-dark"></div>
-        <p class="text-center mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, ea? Laboriosam, ratione explicabo vitae dignissimos veritatis, sapiente tempora <br> quam animi corrupti cum quisquam voluptas veniam unde error totam cupiditate laborum!</p>
+        <p class="text-center mt-3">
+            "Have a question or need assistance? Our dedicated team is here to help. Reach out to us for inquiries, reservations, or any special requests. Your comfort and satisfaction are our top priorities."</p>
     </div>
 
     <div class="container">

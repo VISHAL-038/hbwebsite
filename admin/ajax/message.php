@@ -12,9 +12,7 @@ if(isset($_POST['get_message']))
         $i=1;
         $data = "";
         while($row = mysqli_fetch_assoc($res)){
-            $buttonClass = $row['seen'] == 0 ? 'btn-danger' : 'btn-success';
-            $buttonText = $row['seen'] == 0 ? 'Mark as Seen' : 'Mark as Unseen';
-            $button = "<button class='btn {$buttonClass} seen-button' data-sr_no='{$row['sr_no']}' data-seen='{$row['seen']}' onclick='toggleSeen({$row['sr_no']}, {$row['seen']})'>{$buttonText}</button>";
+            $seenButton = $row['seen'] == 1 ? "<button onClick='toggleSeen({$row['sr_no']},0)' class='btn btn-dark btn-sm'>active</button>" : "<button onClick='toggleSeen({$row['sr_no']},1)' class='btn btn-warning btn-sm'>inactive</button>";
             $data .="
             <tr>
                 <td>{$i}</td>
@@ -23,7 +21,7 @@ if(isset($_POST['get_message']))
                 <td>{$row['subject']}</td>
                 <td>{$row['message']}</td>
                 <td>{$row['date']}</td>
-                <td>{$button}</td>
+                <td>{$seenButton}</td>
             </tr>
             ";
             $i++;
@@ -31,7 +29,20 @@ if(isset($_POST['get_message']))
         echo $data;
     } else {
         error_log("Error: " . mysqli_error($conn));
-        echo "Error retrieving messages.";
+        echo json_encode(array("error" => "Error retrieving messages."));
+    }
+}
+
+if(isset($_POST['toggleSeen'])){
+    $frm_data = filteration($_POST);
+
+    $q = "UPDATE `user_queries` SET `seen`=? WHERE `sr_no`=?";
+    $v = array($frm_data['value'], $frm_data['toggleSeen']);
+    if(update($q, $v, 'si')){
+        echo 1;
+    }
+    else{
+        echo 0;
     }
 }
 ?>

@@ -195,12 +195,12 @@
                 <h5 class="mt-3">Massage</h5>
             </div>
             <div class="col-lg-2 cold-md-2 text-center  bg-white rounded shadow py-4 my-3">
-                <img src="./images/facilities/fire.svg" alt="" width="80px">
-                <h5 class="mt-3">Fire Alarm</h5>
+                <img src="./images/facilities/free-swimming-pool-2923391-2432965.webp" alt="" width="80px">
+                <h5 class="mt-3">Swimming</h5>
             </div>
             <div class="col-lg-2 cold-md-2 text-center  bg-white rounded shadow py-4 my-3">
-                <img src="./images/facilities/food.png" alt="" width="80px">
-                <h5 class="mt-3">Meal</h5>
+                <img src="./images/facilities/69840.png" alt="" width="80px">
+                <h5 class="mt-3">Gym</h5>
             </div>
             <div class="col-lg-12 text-center mt-5">
                 <a href="./facilities.php" class="btn btn-sm btn-outline-primary rounded-0 fw-bold shadow">More Facilities</a>
@@ -211,58 +211,39 @@
 
     <!--Testimonials  -->
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Testimonials</h2>
+    
     <div class="container">
         <div class="swiper swiper-testmonials">
             <div class="swiper-wrapper mb-5">
-              <div class="swiper-slide bg-light p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="./images/facilities/TV.svg" alt="" width="30px">
-                    <h6 class="m-0 ms-2">Random User</h6>
+                <?php 
+                    $message_res = select("SELECT * FROM `user_queries` WHERE `seen`=?", [1], 'i');
+                    while($message_data = mysqli_fetch_assoc($message_res)){
+                ?>
+                <div class="swiper-slide bg-light p-4">
+                    <div class="profile d-flex align-items-center mb-3">
+                        <img src="./images/facilities/TV.svg" alt="" width="30px">
+                        <h6 class="m-0 ms-2"><?php echo $message_data['name']; ?></h6>
+                    </div>
+                    <p><?php echo $message_data['message']; ?>.</p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
                 </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti rerum ratione reprehenderit! Laboriosam necessitatibus, tempora officia aliquam, est blanditiis, corrupti mollitia sunt quibusdam iste architecto? Eligendi obcaecati amet numquam dolorem.</p>
-                <div class="rating">
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                </div>
-              </div>
-              <div class="swiper-slide bg-light p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="./images/facilities/TV.svg" alt="" width="30px">
-                    <h6 class="m-0 ms-2">Random User</h6>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti rerum ratione reprehenderit! Laboriosam necessitatibus, tempora officia aliquam, est blanditiis, corrupti mollitia sunt quibusdam iste architecto? Eligendi obcaecati amet numquam dolorem.</p>
-                <div class="rating">
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                </div>
-              </div>
-              <div class="swiper-slide bg-light p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="./images/facilities/TV.svg" alt="" width="30px">
-                    <h6 class="m-0 ms-2">Random User</h6>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti rerum ratione reprehenderit! Laboriosam necessitatibus, tempora officia aliquam, est blanditiis, corrupti mollitia sunt quibusdam iste architecto? Eligendi obcaecati amet numquam dolorem.</p>
-                <div class="rating">
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                </div>
-              </div>
+                <?php
+                    }
+                ?>
             </div>
             <div class="swiper-pagination"></div>
-          </div>
-          <div class="col-lg-12 text-center mt-5">
+        </div>
+        <div class="col-lg-12 text-center mt-5">
             <a href="./about.php" class="btn btn-sm btn-outline-primary rounded-0 fw-bold shadow">Know More</a>
         </div>
     </div>
+
     <!-- Testimonials end -->
 
     <!-- Reach US -->
