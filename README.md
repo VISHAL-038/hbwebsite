@@ -21,7 +21,7 @@ This is a full-stack hotel website where users can book rooms, send queries to t
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/hotel-website.git
+   git clone https://github.com/your-username/hbwebsite.git
 
 2. Start your local server (e.g., XAMPP, WAMP).
 3. Import the database:
