@@ -34,6 +34,7 @@ This is a full-stack hotel website where users can book rooms, send queries to t
    DB_PASS=
    DB_NAME=hotel
 
+
 5. Start the development server.
 6. Open your browser and navigate to http://localhost/hotel-website to view the website.
 
