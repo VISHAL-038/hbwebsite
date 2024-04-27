@@ -36,7 +36,7 @@ This is a full-stack hotel website where users can book rooms, send queries to t
 
 
 5. Start the development server.
-6. Open your browser and navigate to http://localhost/hotel-website to view the website.
+6. Open your browser and navigate to http://localhost/hbwebsite to view the website.
 
 ## Usage
 
