@@ -26,6 +26,7 @@ if(isset($_POST['get_all_rooms']))
     $res = select($sql, [0], 'i');
     $i=0;
     $data = "";
+    $count = "";
     while($row=mysqli_fetch_assoc($res)){
         if($row['status']==1){
             $status = "
@@ -59,8 +60,11 @@ if(isset($_POST['get_all_rooms']))
             </tr>
         ";
         $i++;
+        $count++;
+
     }
     echo $data;
+    echo "<p>Total rooms are " . $count . "</p>";
 }
 
 if(isset($_POST['add_image']))

@@ -11,6 +11,7 @@ if(isset($_POST['get_users']))
     $res = select($sql); // Using prepared statements is recommended
 
     $i = 1; // Start from 1
+    $count=0;
     $data = "";
     while($row = mysqli_fetch_assoc($res)){
         // Escape HTML entities
@@ -33,11 +34,13 @@ if(isset($_POST['get_users']))
                 <td><button type='button' class='btn btn-dark btn-sm'>Active</button></td> 
                 <td>$datentime</td>
                 <td><button type='button' class='btn btn-danger shadow btn-sm''>action</button></td> 
-            </tr>
+            </tr>      
         ";   
         $i++;
+        $count++;
     }
     echo $data;
+    echo "<p>Total users are " . $count . "</p>";
 }
 
 

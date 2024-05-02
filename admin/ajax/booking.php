@@ -11,6 +11,7 @@ if(isset($_POST['get_bookings']))
     if ($res) {
         $i=1;
         $data = "";
+        $count = 0;
         while($row = mysqli_fetch_assoc($res)){
             $data .="
             <tr>
@@ -22,8 +23,10 @@ if(isset($_POST['get_bookings']))
             </tr>
             ";
             $i++;
+            $count++;
         }
         echo $data;
+        echo "<p>Total bookings are " . $count . "</p>";
     } else {
         echo "Error retrieving bookings.";
     }
