@@ -10,12 +10,6 @@ adminLogin();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel : Dashboard</title>
     <?php require('inc/links.php');?>
-    <!-- <style>
-        /* Add CSS for left margin */
-        #main-con {
-            margin-left: 200px; /* Adjust as needed */
-        }
-    </style> -->
 </head>
 <body class="bg-light">
     

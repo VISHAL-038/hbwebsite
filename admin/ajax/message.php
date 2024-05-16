@@ -11,6 +11,7 @@ if(isset($_POST['get_message']))
     if ($res) {
         $i=1;
         $data = "";
+        $count = "";
         while($row = mysqli_fetch_assoc($res)){
             $seenButton = $row['seen'] == 1 ? "<button onClick='toggleSeen({$row['sr_no']},0)' class='btn btn-dark btn-sm'>active</button>" : "<button onClick='toggleSeen({$row['sr_no']},1)' class='btn btn-warning btn-sm'>inactive</button>";
             $data .="
@@ -25,8 +26,10 @@ if(isset($_POST['get_message']))
             </tr>
             ";
             $i++;
+            $count++;
         }
         echo $data;
+        echo "<p>Total reviews or msg are are " . $count . "</p>";
     } else {
         error_log("Error: " . mysqli_error($conn));
         echo json_encode(array("error" => "Error retrieving messages."));

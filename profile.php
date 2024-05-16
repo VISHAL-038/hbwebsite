@@ -82,9 +82,6 @@
         echo "</div>";
         echo "</div>";
         echo "</div>";
-
-
-
     } 
     else {
         echo "<p class='text-danger'>You are not logged in.</p>";
