@@ -82,6 +82,7 @@
         }
     }
 
+    
     function insert($sql, $values, $datatypes)
     {
         $con = $GLOBALS['con'];
