@@ -25,8 +25,8 @@ This is a full-stack hotel website where users can book rooms, send queries to t
 
 2. Start your local server (e.g., XAMPP, WAMP).
 3. Import the database:
-   Open phpMyAdmin and create a new database called hotel.
-   Import the hotel.sql file located in the database directory of the project.
+   Open phpMyAdmin and create a new database called hbwebsite.
+   and make tables used in this project
 4. Set up environment variables:Create a .env file in the root directory and add the following:
    
    DB_HOST=localhost
